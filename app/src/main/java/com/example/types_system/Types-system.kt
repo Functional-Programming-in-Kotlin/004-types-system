@@ -3,7 +3,8 @@ package com.example.types_system
 enum class Weather {
     rainy,
     windy,
-    sunny
+    sunny,
+    snowy
 }
 
 fun navigateToNextScreen(weather: Weather) {
@@ -17,5 +18,5 @@ fun navigateToNextScreen(weather: Weather) {
 
 fun main(args: Array<String>) {
 //    print(Rainy().label)
-    navigateToNextScreen(Weather.rainy)
+    navigateToNextScreen(Weather.windy)
 }
