@@ -9,6 +9,8 @@ class Windy: Weather("💨")
 
 class Sunny: Weather("☀️")
 
+class MyEvilWeather: Weather("😈")
+
 fun main(args: Array<String>) {
     print(Rainy().label)
 }
