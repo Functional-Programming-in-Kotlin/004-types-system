@@ -1,15 +1,10 @@
 package com.example.types_system
-open class Weather(emoji: String) {
-    val label = "Weather is $emoji"
+
+enum class Weather {
+    rainy,
+    windy,
+    sunny
 }
-
-class Rainy: Weather("🌧")
-
-class Windy: Weather("💨")
-
-class Sunny: Weather("☀️")
-
-class MyEvilWeather: Weather("😈")
 
 fun navigateToNextScreen(weather: Weather) {
 
