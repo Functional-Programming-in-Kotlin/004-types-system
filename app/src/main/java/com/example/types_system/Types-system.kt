@@ -9,15 +9,13 @@ enum class Weather {
 fun navigateToNextScreen(weather: Weather) {
 
     when(weather) {
-        is Rainy -> println("go to buy an umbrella")
-        is Windy -> println("go to buy a coffe")
-        is Sunny -> println("go to buy an ice cream")
-        // This is de problem, we need add this
-        else -> println("don't know where to go")
+        Weather.rainy -> println("go to buy an umbrella")
+        Weather.windy -> println("go to buy a coffe")
+        Weather.sunny -> println("go to buy an ice cream")
     }
 }
 
 fun main(args: Array<String>) {
 //    print(Rainy().label)
-    navigateToNextScreen(Rainy())
+    navigateToNextScreen(Weather.rainy)
 }
