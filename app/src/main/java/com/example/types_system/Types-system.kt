@@ -1,26 +1,22 @@
 package com.example.types_system
 
-sealed class Weather(emoji: String) {
-    val label = "Weather is $emoji"
+enum class Weather {
+    rainy,
+    windy,
+    sunny,
+    snowy
 }
 
-class  Rainy : Weather("🌧")
-
-class  Windy : Weather("💨")
-
-class  Sunny : Weather("☀️")
-
-class  Snowy : Weather("🌨️")
-
-fun navigateToNextScreen(weather: Weather) =
+fun navigateToNextScreen(weather: Weather)  =
     when(weather) {
-        is Rainy -> println("go to buy an umbrella")
-        is Windy -> println("go to buy a coffe")
-        is Sunny -> println("go to buy an ice cream")
-        is Snowy -> println("go to buy a snowboard")
+        Weather.rainy -> println("go to buy an umbrella")
+        Weather.windy -> println("go to buy a coffe")
+        Weather.sunny -> println("go to buy an ice cream")
+        Weather.snowy -> println("go to buy a Snowboard")
     }
+
 
 fun main(args: Array<String>) {
 //    print(Rainy().label)
-    navigateToNextScreen(Rainy())
+    navigateToNextScreen(Weather.windy)
 }
